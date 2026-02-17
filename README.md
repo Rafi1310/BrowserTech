@@ -17,3 +17,22 @@ Ik heb geleerd wat je allemaal kan met formulieren. De verschillende input types
 ### Wat ga ik morgen doen
 
 Verder met de html. Ik ga de tweede pagina maken. Als er tijd over is ga ik alvast beginnen met stylen.
+
+
+## Check-out (met Jeppe)
+
+### Wat heb ik gedaan
+
+Ik heb vandaag de cursus html gevolgd
+
+### Hoeveel tijd heeft dat mij gekost
+
+Dit heeft mij ongeveer 1,5 uur geduurd
+
+### Wat heb ik geleerd
+
+Ik heb geleerd wat een datalist is en wat je er mee kan doen en gebruiken.
+
+### Wat ga ik morgen doen
+
+Morgen ga ik beginnen met het nieuwe vak css. 
