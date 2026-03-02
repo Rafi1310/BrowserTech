@@ -36,3 +36,21 @@ Ik heb geleerd wat een datalist is en wat je er mee kan doen en gebruiken.
 ### Wat ga ik morgen doen
 
 Morgen ga ik beginnen met het nieuwe vak css. 
+
+## Check-out (met Justin)
+
+### Wat heb ik gedaan
+
+Ik heb vandaag de cursus validation gevolgd.
+
+### Hoeveel tijd heeft dat mij gekost
+
+Dit heeft mij iets van 1,5 gekost
+
+### Wat heb ik geleerd
+
+Ik weet nu meer over hoe je forms moet valideren. Ook weet ik nu hoe je bijvoorbeeld er voor zorgt dat een postcode geldig is. Dit doe je met regular expressions
+
+### Wat ga ik morgen doen
+
+Morgen ga ik zorgen dat ik echt met de styling verder ga.
