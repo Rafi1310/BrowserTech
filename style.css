@@ -1,17 +1,50 @@
 * {
     margin: 0;
     padding: 0;
+    background: var(--main-background-clr);
+}
+
+:root {
+    --p-color: #003082;
+    --main-background-clr: #E6E6E9;
+    --second-background: #FFC919; 
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background: red;
+    border-radius: 0 0 16px 16px;
+}
+
+span {
+    background: red;
+    padding: 1em;
+}
+
+h2 {
+    background: red;
 }
 
 fieldset {
     padding: 1em;
     margin: 1em;
+    background: var(--second-background);
+    border-color: transparent;
+    border-radius: 16px;
+    color: var(--p-color);
+}
+
+legend {
+    background: var(--second-background);
 }
 
 label {
     display: block;
+    background: #FFC919;
 }
 
 input {
-    
+    display: block;
 }

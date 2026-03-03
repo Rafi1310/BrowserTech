@@ -54,3 +54,22 @@ Ik weet nu meer over hoe je forms moet valideren. Ook weet ik nu hoe je bijvoorb
 ### Wat ga ik morgen doen
 
 Morgen ga ik zorgen dat ik echt met de styling verder ga.
+
+
+## Check-out (met Mila)
+
+### Wat heb ik gedaan
+
+Ik heb vandaag de styling gedaan van mijn project
+
+### Hoeveel tijd heeft dat mij gekost
+
+Dit heeft mij ongeveer 5 uurtjes gekost.
+
+### Wat heb ik geleerd
+
+Ik heb geleerd hoe je de formulieren moet stylen
+
+### Wat ga ik morgen doen
+
+Morgen ga ik een begin maken voor de control panel. Ik wil hierbij een nintendo switch gaan maken en proberen het design af te krijgen. Ik ga me nog niet bezighouden met functionaliteiten.
