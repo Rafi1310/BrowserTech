@@ -2,25 +2,37 @@
     margin: 0;
     padding: 0;
     background: var(--main-background-clr);
+    font-family: sans-serif;
 }
 
 :root {
     --p-color: #003082;
     --main-background-clr: #E6E6E9;
-    --second-background: #FFC919; 
+    --header-background: #FFC919; 
+    --second-background: #F0F1F3;
 }
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 1em;
-    background: red;
     border-radius: 0 0 16px 16px;
+    background: var(--header-background);
+}
+
+h1 {
+    background: transparent;
 }
 
 span {
     background: red;
     padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: max-content;
+    border-radius: 16px;
+    margin: 1em;
 }
 
 h2 {
@@ -38,11 +50,12 @@ fieldset {
 
 legend {
     background: var(--second-background);
+    text-decoration: underline;
 }
 
 label {
     display: block;
-    background: #FFC919;
+    background: var(--second-background);
 }
 
 input {
