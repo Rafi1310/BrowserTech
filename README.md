@@ -73,3 +73,21 @@ Ik heb geleerd hoe je de formulieren moet stylen
 ### Wat ga ik morgen doen
 
 Morgen ga ik een begin maken voor de control panel. Ik wil hierbij een nintendo switch gaan maken en proberen het design af te krijgen. Ik ga me nog niet bezighouden met functionaliteiten.
+
+## *9 maart 2026*
+### Check-out (met Mitchell)
+**Wat heb ik vandaag gedaan**
+
+Ik ben vandaag verder gegaan met het stylen van het formulier. Ik heb me nu beter aan het ns schema gehouden. Ik heb nu ervoor gezorgd dat er een light en dark mode is. Hierbij heb ik de juiste kleuren gebruikt met de precieze hex codes. Ook heb ik het font gedownload van de ns. Ik heb deze in de gitignore gezet zodat die niet gebruikt word.
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Ik ben hier de ochtend aan begonnen en ben aan het eind van de les eigenlijk nog niet klaar.
+
+**Wat heb ik geleerd**
+
+Ik heb geleerd hoe ik het font in de gitignore moet zetten en hoe ik de font moet downloaden.
+
+**Wat ga ik morgen doen**
+
+Verder met stylen en kijken of ik al wat met validation kan doen

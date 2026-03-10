@@ -6,10 +6,22 @@
 }
 
 :root {
+    color-scheme: light dark;
     --p-color: #003082;
     --main-background-clr: #E6E6E9;
     --header-background: #FFC919; 
     --second-background: #F0F1F3;
+    --heading-color: light-dark(#0A3681, #E3E4E7);
+}
+
+@font-face {
+    font-family: nssans-regular;
+    src: url(/fonts/nssans-regular.woff2);
+}
+
+@font-face {
+    font-family: nssans-bold;
+    src: url(/fonts/nssans-bold.woff2);
 }
 
 header {
@@ -23,6 +35,7 @@ header {
 
 h1 {
     background: transparent;
+    color: var(--heading-color);
 }
 
 span {
