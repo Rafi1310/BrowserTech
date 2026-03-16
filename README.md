@@ -91,3 +91,22 @@ Ik heb geleerd hoe ik het font in de gitignore moet zetten en hoe ik de font moe
 **Wat ga ik morgen doen**
 
 Verder met stylen en kijken of ik al wat met validation kan doen
+
+## *10 maart 2026*
+### Check-out (met Alex)
+**Wat heb ik vandaag gedaan**
+
+Ik heb vandaag de styling gedaan. Ik heb deze nu zo goed als af. 
+Ook heb ik de workshop over toegankelijkheid gedaan. Dit was best wel handig, alleen ging soms een beetje snel want was best veel javascript
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Ik ben hier de hele les mee bezig geweest. 
+
+**Wat heb ik geleerd**
+
+Ik heb geleerd hoe ik bezig kan met toegankelijkheid. Ook weet ik wat beter wat er nou met patterns bedoeld word. 
+
+**Wat ga ik morgen doen**
+
+Morgen ga ik verder met het css vak. Ik wil ervoor zorgen dat de switch responsive word. Als het scherm klein is gaan de joycons van het display af. 

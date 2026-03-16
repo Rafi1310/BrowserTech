@@ -1,17 +1,45 @@
 * {
     margin: 0;
     padding: 0;
-    background: var(--main-background-clr);
-    font-family: sans-serif;
+    box-sizing: border-box; /* Erg belangrijk voor formulieren! */
+    font-family: nssans-regular, sans-serif;
 }
 
+
 :root {
+    /* Dit vertelt de browser welke modi we ondersteunen */
     color-scheme: light dark;
-    --p-color: #003082;
-    --main-background-clr: #E6E6E9;
-    --header-background: #FFC919; 
-    --second-background: #F0F1F3;
-    --heading-color: light-dark(#0A3681, #E3E4E7);
+
+    /* NS Kleuren */
+    --ns-yellow: #FFC710;
+    --ns-blue: #003082;
+
+    /* Variabelen die veranderen per thema */
+    --main-background-clr: light-dark(#E6E6E9, #1A1A1C);
+    --header-background: light-dark(#FFC710, #252528); 
+    --heading-color: light-dark(#003082, #FFC710);
+    --card-bg: light-dark(#FFFFFF, #28282A);
+    --text-clr: light-dark(#003082, #E3E4E7);
+    --text-clr-date: light-dark(var(--ns-blue), var(--ns-yellow))
+}
+
+/* Zorg dat de body de juiste achtergrond krijgt */
+body {
+    background-color: var(--main-background-clr);
+    color: var(--text-clr);
+    transition: background-color 0.3s ease; /* Zorgt voor een vloeiende overgang */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 1em;
+    /* We gebruiken hier de variabele die we in de :root hebben gezet */
+    background-color: var(--header-background);
+    border-bottom: 4px solid var(--ns-blue);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -24,53 +52,108 @@
     src: url(/fonts/nssans-bold.woff2);
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
-    border-radius: 0 0 16px 16px;
-    background: var(--header-background);
-}
+
 
 h1 {
-    background: transparent;
     color: var(--heading-color);
+    font-family: nssans-bold, sans-serif;
+    margin-top: 0.5em;
 }
 
-span {
-    background: red;
-    padding: 1em;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: max-content;
+.school-badge {
+    background: var(--ns-blue);
+    color: white;
+    padding: 0.25em 1em;
     border-radius: 16px;
-    margin: 1em;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-h2 {
-    background: red;
+/* Formulier Layout */
+main {
+    max-width: 800px; /* Zorgt dat het formulier niet te breed wordt op grote schermen */
+    margin: 2em auto; /* Centreert het formulier in het midden van de pagina */
+    padding: 0 1em;
 }
 
-fieldset {
-    padding: 1em;
-    margin: 1em;
-    background: var(--second-background);
-    border-color: transparent;
-    border-radius: 16px;
-    color: var(--p-color);
+.intro-text {
+    font-family: nssans-bold, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Kaarten (Fieldsets) */
+.card {
+    background: var(--card-background);
+    border: none;
+    border-radius: 8px;
+    padding: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 8px rgba(0, 48, 130, 0.1); /* Subtiele blauwe schaduw */
 }
 
 legend {
-    background: var(--second-background);
-    text-decoration: underline;
+    font-family: nssans-bold, sans-serif;
+    font-size: 1.2em;
+    color: var(--heading-color);
+    margin-bottom: 1em;
+    padding: 0;
 }
 
+.sub-vraag {
+    border: none;
+    margin-bottom: 1.5em;
+    padding: 0;
+}
+
+.sub-vraag legend {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Input velden */
 label {
     display: block;
-    background: var(--second-background);
+    font-weight: bold;
+    margin-bottom: 1em;
 }
 
-input {
+input[type="text"],
+input[type="number"],
+input[type="date"] {
     display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: var(--text-clr-date);
+    transition: border-color 0.2s;
 }
+
+/* Focus state: laat zien welk veld actief is (NS Geel omlijning) */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--ns-yellow);
+    box-shadow: 0 0 0 2px var(--ns-yellow);
+}
+
+/* Radio buttons spacing */
+.radio-label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    transform: scale(1.2); /* Maakt radio buttons iets groter en beter klikbaar */
+    accent-color: var(--ns-blue); /* Kleurt de radio button blauw als hij is aangevinkt */
+}
+
