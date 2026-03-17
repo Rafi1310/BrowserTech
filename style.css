@@ -157,3 +157,13 @@ input[type="radio"] {
     accent-color: var(--ns-blue); /* Kleurt de radio button blauw als hij is aangevinkt */
 }
 
+fieldset.extra-stap {
+    display: none;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    border-left: 4px solid var(--ns-yellow);
+}
+
+fieldset:has(input[value="ja"]:checked) + fieldset.extra-stap {
+    display: block;
+}

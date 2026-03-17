@@ -110,3 +110,21 @@ Ik heb geleerd hoe ik bezig kan met toegankelijkheid. Ook weet ik wat beter wat 
 **Wat ga ik morgen doen**
 
 Morgen ga ik verder met het css vak. Ik wil ervoor zorgen dat de switch responsive word. Als het scherm klein is gaan de joycons van het display af. 
+
+## *10 maart 2026*
+### Check-out (met Ocean)
+**Wat heb ik vandaag gedaan**
+
+Vandaag heb ik de progressive disclosure als pattern in de website gezet.
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Ik ben hier de hele les mee bezig geweest
+
+**Wat heb ik geleerd**
+
+Ik weet nu dat de progressive disclosure gewoon met puur css kan. Ik dacht de hele tijd dat je hiervoor javascript nodig had. Je kan gelukkig gewoon de has() gebruiken met css hiervoor
+
+**Wat ga ik morgen doen**
+
+Morgen ga ik verder met het het formulier. Dan ga ik de validatie toevoegen. Ook wil ik voor het vak CSS even verder
