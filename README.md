@@ -111,7 +111,7 @@ Ik heb geleerd hoe ik bezig kan met toegankelijkheid. Ook weet ik wat beter wat 
 
 Morgen ga ik verder met het css vak. Ik wil ervoor zorgen dat de switch responsive word. Als het scherm klein is gaan de joycons van het display af. 
 
-## *10 maart 2026*
+## *16 maart 2026*
 ### Check-out (met Ocean)
 **Wat heb ik vandaag gedaan**
 
@@ -128,3 +128,27 @@ Ik weet nu dat de progressive disclosure gewoon met puur css kan. Ik dacht de he
 **Wat ga ik morgen doen**
 
 Morgen ga ik verder met het het formulier. Dan ga ik de validatie toevoegen. Ook wil ik voor het vak CSS even verder
+
+## *17 maart 2026*
+### Check-out (met Eva)
+**Wat heb ik vandaag gedaan**
+
+Ik ben verder gegaan met de progressive disclosure en die is nu af
+
+**Hoeveel tijd heeft dat mij gekost**
+
+Ik ben hier de hele les mee bezig geweest
+
+**Wat heb ik geleerd**
+
+Ik heb geleerd dat je fieldsets kan weghalen en laten verschijnen met display none en display block
+
+**Wat ga ik morgen doen**
+
+Morgen ga ik verder met de opdracht van het vak css
+
+### Bronnenlijst
+
+https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system
+https://www.ns.nl/?utm_source=google&utm_medium=Paid_Search&utm_campaign=NSR-CORP-BR-corporate_C13090&utm_content=&utm_term=ns&utm_id=google_ads_16495705419&gad_source=1&gad_campaignid=16495705419&gbraid=0AAAAADPhMscOGsnbLvpfSAEeOuyJlImTK&gclid=Cj0KCQjw4PPNBhD8ARIsAMo-icyUSpHJsk1Lix_XuScoY1gTeSYlMBf6a0xTNYppQXmAS-pSRPdECgIaAveIEALw_wcB
+https://download.belastingdienst.nl/belastingdienst/docs/aangifte_erfbel_2025_suc0602z52fol.pdf

@@ -1,20 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Erg belangrijk voor formulieren! */
+    box-sizing: border-box; 
     font-family: nssans-regular, sans-serif;
 }
 
 
 :root {
-    /* Dit vertelt de browser welke modi we ondersteunen */
+    
     color-scheme: light dark;
 
-    /* NS Kleuren */
     --ns-yellow: #FFC710;
     --ns-blue: #003082;
 
-    /* Variabelen die veranderen per thema */
+    
     --main-background-clr: light-dark(#E6E6E9, #1A1A1C);
     --header-background: light-dark(#FFC710, #252528); 
     --heading-color: light-dark(#003082, #FFC710);
@@ -23,11 +22,11 @@
     --text-clr-date: light-dark(var(--ns-blue), var(--ns-yellow))
 }
 
-/* Zorg dat de body de juiste achtergrond krijgt */
+
 body {
     background-color: var(--main-background-clr);
     color: var(--text-clr);
-    transition: background-color 0.3s ease; /* Zorgt voor een vloeiende overgang */
+    transition: background-color 0.3s ease; 
 }
 
 header {
@@ -35,7 +34,6 @@ header {
     flex-direction: column;
     justify-content: center;
     padding: 2em 1em;
-    /* We gebruiken hier de variabele die we in de :root hebben gezet */
     background-color: var(--header-background);
     border-bottom: 4px solid var(--ns-blue);
     width: 100%;
@@ -72,8 +70,8 @@ h1 {
 
 /* Formulier Layout */
 main {
-    max-width: 800px; /* Zorgt dat het formulier niet te breed wordt op grote schermen */
-    margin: 2em auto; /* Centreert het formulier in het midden van de pagina */
+    max-width: 800px; 
+    margin: 2em auto; 
     padding: 0 1em;
 }
 
@@ -83,7 +81,7 @@ main {
     margin-bottom: 1em;
 }
 
-/* Kaarten (Fieldsets) */
+
 .card {
     background: var(--card-background);
     border: none;
@@ -112,7 +110,7 @@ legend {
     margin-bottom: 0.5em;
 }
 
-/* Input velden */
+
 label {
     display: block;
     font-weight: bold;
@@ -133,7 +131,7 @@ input[type="date"] {
     transition: border-color 0.2s;
 }
 
-/* Focus state: laat zien welk veld actief is (NS Geel omlijning) */
+
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus {
@@ -142,7 +140,7 @@ input[type="date"]:focus {
     box-shadow: 0 0 0 2px var(--ns-yellow);
 }
 
-/* Radio buttons spacing */
+
 .radio-label {
     font-weight: normal;
     display: flex;
@@ -153,8 +151,8 @@ input[type="date"]:focus {
 }
 
 input[type="radio"] {
-    transform: scale(1.2); /* Maakt radio buttons iets groter en beter klikbaar */
-    accent-color: var(--ns-blue); /* Kleurt de radio button blauw als hij is aangevinkt */
+    transform: scale(1.2); 
+    accent-color: var(--ns-blue); 
 }
 
 fieldset.extra-stap {
