@@ -147,8 +147,34 @@ Ik heb geleerd dat je fieldsets kan weghalen en laten verschijnen met display no
 
 Morgen ga ik verder met de opdracht van het vak css
 
+
+
+## Eindproduct
+<img src="readme_images/eindproduct.png" width="500px" alt="Eind website">
+
+
+
+
+## Herkansing
+Voor de herkansing heb ik best wat dingen aangepast. Ik heb er nu voor gezorgd dat ik m'n eerste pattern goed heb gekregen. Dit is bij mij de progressive disclosure. Als je er nu op klikt en je toch van antwoord wil wisselen gaat die ook echt weg en blijft die niet staan zoals die eerst deed. Die werkt nu goed. Ik heb aan de validatie gewerkt. Ik heb bijvoorbeeld ervoor gezorgd dat het een gelding bsn nummer moet zijn met de elfproef. Je kan nu pas het formulier versturen als alles goed is ingevuld. Ook heb ik een tweede en een derde pattern zelfs toegevoegd. Ik heb er voor gezorgd dat je kan kiezen uit een van de 3 opties. BSN/RSIN nummer, beconnummer of het notarisnummer. Ook heb ik als extraatje omdat ik had gezegd dat ik die ging doen een datalist met de landen toegevoegd als derde pattern. 
+Ik heb knoppen toegevoegd die ook alleen werken als alles is ingevuld. Als iets niet is ingevuld komt er met een wolkje te staan wat nog ingevuld moet worden. Als je alles heb ingevuld en je het formulier wil versturen controleerd die of alle required fields zijn ingevuld. Zo nee, dan verstuurt die het niet en zegt die wat je mist. Zo ja, dan word je naar een volgende pagina gestuurd met een melding dat het succesvol is ingeleverd.
+Ook heb een favicon toegevoegd.
+
+## Herkansing eindproduct
+
+<img src="readme_images/eindproduct-herkansing-1.png" width="500px" alt="Eind website herkansing">
+<img src="readme_images/eindproduct-herkansing-2.png" width="500px" alt="Eind website herkansing">
+<img src="readme_images/eindproduct-herkansing-3.png" width="500px" alt="Eind website herkansing">
+<img src="readme_images/eindproduct-herkansing-4.png" width="500px" alt="Eind website herkansing">
+<img src="readme_images/eindproduct-herkansing-5.png" width="500px" alt="Eind website herkansing">
+
 ### Bronnenlijst
 
 https://tractie.ns.nl/2e23992f3/p/226ce1-tractie--ns-design-system
 https://www.ns.nl/?utm_source=google&utm_medium=Paid_Search&utm_campaign=NSR-CORP-BR-corporate_C13090&utm_content=&utm_term=ns&utm_id=google_ads_16495705419&gad_source=1&gad_campaignid=16495705419&gbraid=0AAAAADPhMscOGsnbLvpfSAEeOuyJlImTK&gclid=Cj0KCQjw4PPNBhD8ARIsAMo-icyUSpHJsk1Lix_XuScoY1gTeSYlMBf6a0xTNYppQXmAS-pSRPdECgIaAveIEALw_wcB
 https://download.belastingdienst.nl/belastingdienst/docs/aangifte_erfbel_2025_suc0602z52fol.pdf
+https://gemini.google.com/app?hl=nl
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength
+https://help.afas.nl/meldingen/NL/SE/137666.htm
+https://fiscaal-online.nl/uitstelregeling/hoe-krijg-ik-een-beconnummer
+https://finom.co/nl-nl/blog/rsin-nummer/?utm_source=www.google.com&utm_medium=referral

@@ -1,168 +1,512 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Favicon-1.png"> <!-- Favicon gemaakt gegenereerd met Gemini -->
     <link rel="stylesheet" href="style.css">
-    <title>Aangifte Erfbelasting (NS Stijl)</title>
+    <title>Aangifte Erfbelasting</title>
 </head>
+
 <body>
     <header>
         <span class="school-badge">Dit is een schoolproject!!!</span>
         <h1>Aangifte erfbelasting</h1>
     </header>
     <main>
-        <form>
-            <p class="intro-text">Vul hier de gegevens in van de overledene</p>
-            
-            <fieldset class="card">
-                <legend>Persoonsgegevens overledene</legend>
-                <label>Voorletter(s) *
-                    <input type="text" name="Voorletters" required>
-                </label>
-                
-                <label>Tussenvoegsel(s)
-                    <input type="text" name="Tussenvoegsels">
-                </label>
-                
-                <label>Achternaam *
-                    <input type="text" name="Achternaam" required>
-                </label>
+        <form id="aangifte-form" action="succes.html">
 
-                <label>BSN overledene *
-                    <input type="number" name="bsn_overledene" required>
-                </label>
+            <div id="stap-1">
+                <p class="intro-text">Vul hier de gegevens in van de overledene</p>
 
-                <label>Overlijdensdatum *
-                    <input type="date" name="overlijdensdatum" required>
-                </label>
-            </fieldset>
-
-            <fieldset class="card">
-                <fieldset class="sub-vraag">
-                    <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="getrouwd" value="nee">
-                        Nee. Ga verder naar vraag 1c
+                <fieldset class="card">
+                    <legend>Persoonsgegevens overledene</legend>
+                    <label>Voorletter(s) *
+                        <input type="text" name="Voorletters" required>
                     </label>
-                    <label class="radio-label">
-                        <input type="radio" name="getrouwd" value="ja">
-                        Ja
+
+                    <label>Tussenvoegsel(s)
+                        <input type="text" name="Tussenvoegsels">
+                    </label>
+
+                    <label>Achternaam *
+                        <input type="text" name="Achternaam" required>
+                    </label>
+
+                    <label>BSN overledene *
+                        <input type="text" id="bsn-input" name="bsn_overledene" required pattern="\d{9}" maxlength="9"
+                            inputmode="numeric" placeholder="123456789">
+                        <span class="error-msg" id="bsn-error" aria-live="polite"></span>
+                    </label>
+
+                    <label>Overlijdensdatum *
+                        <input type="date" name="overlijdensdatum" required>
                     </label>
                 </fieldset>
 
-                <fieldset class="sub-vraag extra-stap">
-                    <legend>Hadden de overledene en diens partner huwelijkse of partnerschapsvoorwaarden in een notariële akte?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="partnerschap" value="nee">
-                        Nee. Ga verder met vraag 1c
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="partnerschap" value="ja">
-                        Ja. Stuur een kopie van de akte mee met de aangifte
-                    </label>
+                <fieldset class="card">
+                    <fieldset class="sub-vraag">
+                        <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment
+                            van overlijden?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="getrouwd" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="getrouwd" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="sub-vraag extra-stap">
+                        <legend>Hadden de overledene en diens partner huwelijkse of partnerschapsvoorwaarden in een
+                            notariële akte?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="partnerschap" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="partnerschap" value="ja">
+                            Ja. Stuur een kopie van de akte mee met de aangifte
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="sub-vraag extra-stap">
+                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="verrekenbeding" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="verrekenbeding" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="sub-vraag extra-stap">
+                        <label>Datum huwelijkse of partnerschapsvoorwaarden
+                            <input type="date" name="datum-voorwaarden" required>
+                        </label>
+                    </fieldset>
                 </fieldset>
 
-                <fieldset class="sub-vraag extra-stap">
-                    <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="verrekenbeding" value="nee">
-                        Nee
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="verrekenbeding" value="ja">
-                        Ja
-                    </label>
-                </fieldset>
-                <fieldset class="sub-vraag extra-stap">
-                <label>Datum huwelijkse of partnerschapsvoorwaarden
-                    <input type="date" name="datum-voorwaarden">
-                </label>
-                </fieldset>
-            </fieldset>
+                <fieldset class="card">
+                    <fieldset class="sub-vraag">
+                        <legend>Had de overledene kinderen?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="kinderen" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="kinderen" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
 
-            <fieldset class="card">
-                <fieldset class="sub-vraag">
-                    <legend>Had de overledene kinderen?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="kinderen" value="nee">
-                        Nee. Ga verder met vraag 1d
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="kinderen" value="ja">
-                        Ja
-                    </label>
-                </fieldset>
+                    <fieldset class="sub-vraag extra-stap">
+                        <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?
+                        </legend>
+                        <label class="radio-label">
+                            <input type="radio" name="kind-overleden" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="kind-overleden" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
 
-                <fieldset class="sub-vraag extra-stap">
-                    <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="kind-overleden" value="nee">
-                        Nee. Ga verder met vraag 1d
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="kind-overleden" value="ja">
-                        Ja
-                    </label>
+                    <fieldset class="sub-vraag extra-stap">
+                        <legend>Had dit overleden kind zelf kinderen?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="overleden-kind-van-kind" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="overleden-kind-van-kind" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
                 </fieldset>
 
-                <fieldset class="sub-vraag extra-stap">
-                    <legend>Had dit overleden kind zelf kinderen?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="overleden-kind-van-kind" value="nee">
-                        Nee
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="overleden-kind-van-kind" value="ja">
-                        Ja
-                    </label>
-                </fieldset>
-            </fieldset>
+                <fieldset class="card">
+                    <fieldset class="sub-vraag">
+                        <legend>Had de overledene een testament?</legend>
+                        <label class="radio-label">
+                            <input type="radio" name="overledene-testament" value="nee" required>
+                            Nee
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="overledene-testament" value="ja">
+                            Ja
+                        </label>
+                    </fieldset>
 
-            <fieldset class="card">
-                <fieldset class="sub-vraag">
-                    <legend>Had de overledene een testament?</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="overledene-testament" value="nee">
-                        Nee. Ga verder met vraag 2
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="overledene-testament" value="ja">
-                        Ja. Vul de gegevens in van de notaris
-                    </label>
+                    <fieldset class="sub-vraag extra-stap">
+                        <label>Protocolnummer notaris *
+                            <input type="number" name="protocolnummer-notaris" required>
+                        </label>
+
+                        <label>Voorletter(s) *
+                            <input type="text" name="voorletters-notaris" required>
+                        </label>
+
+                        <label>Tussenvoegsel(s)
+                            <input type="text" name="tussenvoegsels-notaris">
+                        </label>
+
+                        <label>Achternaam *
+                            <input type="text" name="achternaam-notaris" required>
+                        </label>
+
+                        <label>Vestigingsplaats *
+                            <input type="text" name="vestigingsplaats" required>
+                        </label>
+
+                        <label>Datum van het testament of laatste wijziging *
+                            <input type="date" name="wijziging-testament" required>
+                        </label>
+
+                        <label>Vul hier het bsn van de overledene nogmaals in *
+                            <input type="number" name="bsn-overledene-2" required>
+                        </label>
+                    </fieldset>
                 </fieldset>
-                <fieldset class="sub-vraag extra-stap">
-                <label>Protocolnummer notaris
-                    <input type="number" name="protocolnummer-notaris">
-                </label>
-                
-                <label>Voorletter(s)
-                    <input type="text" name="voorletters-notaris">
-                </label>
-                
-                <label>Tussenvoegsel(s)
-                    <input type="text" name="tussenvoegsels-notaris">
-                </label>
-                
-                <label>Achternaam
-                    <input type="text" name="achternaam-notaris">
-                </label>
-                
-                <label>Vestigingsplaats
-                    <input type="text" name="vestigingsplaats">
-                </label>
-                
-                <label>Datum van het testament of laatste wijziging
-                    <input type="date" name="wijziging-testament">
-                </label>
-                
-                <label>Vul hier het bsn van de overledene nogmaals in
-                    <input type="number" name="bsn-overledene-2">
-                </label>
+
+                <button type="button" id="btn-volgende" class="ns-btn">Volgende</button>
+            </div>
+
+            <div id="stap-2" style="display: none;">
+
+                <fieldset class="card" id="gemachtigde-kaart">
+                    <legend>Gegevens gemachtigde</legend>
+                    <p>Kies met welk gegeven u de gemachtigde wilt opgeven:</p>
+
+                    <div class="keuze-knoppen">
+                        <label class="ns-keuze-label">
+                            <input type="radio" name="gemachtigde_keuze" value="bsn" class="visually-hidden">
+                            Bsn/RSIN gemachtigde
+                        </label>
+                        <label class="ns-keuze-label">
+                            <input type="radio" name="gemachtigde_keuze" value="becon" class="visually-hidden">
+                            Beconnummer adviseur
+                        </label>
+                        <label class="ns-keuze-label">
+                            <input type="radio" name="gemachtigde_keuze" value="protocol" class="visually-hidden">
+                            Protocolnummer notaris
+                        </label>
+                    </div>
+
+                    <fieldset class="extra-stap" id="invoer-bsn">
+                        <legend class="visually-hidden">BSN Invoer</legend>
+                        <label>Vul Bsn/RSIN gemachtigde in *
+                            <input type="text" id="input-bsn" name="bsn_gemachtigde" minlength="9" maxlength="9">
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="extra-stap" id="invoer-becon">
+                        <legend class="visually-hidden">Beconnummer Invoer</legend>
+                        <label>Vul Beconnummer adviseur in *
+                            <input type="text" id="input-becon" name="beconnummer" minlength="6" maxlength="7">
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="extra-stap" id="invoer-protocol">
+                        <legend class="visually-hidden">Protocolnummer Invoer</legend>
+                        <label>Vul Protocolnummer notaris in *
+                            <input type="text" id="input-protocol" name="protocolnummer" minlength="6" maxlength="6">
+                        </label>
+                    </fieldset>
                 </fieldset>
-            </fieldset>
+                <fieldset class="card" id="adres-kaart">
+                    <legend>Persoons- en adresgegevens gemachtigde</legend>
+
+                    <label>Voorletter(s) *
+                        <input type="text" name="gemachtigde_voorletters" required>
+                    </label>
+                    <label>Tussenvoegsel(s)
+                        <input type="text" name="gemachtigde_tussenvoegsels">
+                    </label>
+                    <label>Achternaam *
+                        <input type="text" name="gemachtigde_achternaam" required>
+                    </label>
+                    <label>Naam instelling (bijvoorbeeld een notariskantoor) *
+                        <input type="text" name="gemachtigde_instelling" required>
+                    </label>
+
+                    <p class="intro-text" style="margin-top: 1.5em; font-size: 1em;">Waar is de gemachtigde gevestigd?
+                    </p>
+                    <div class="keuze-knoppen">
+                        <label class="ns-keuze-label">
+                            <input type="radio" name="adres_keuze" value="nl" class="visually-hidden">
+                            Adres in Nederland
+                        </label>
+                        <label class="ns-keuze-label">
+                            <input type="radio" name="adres_keuze" value="buitenland" class="visually-hidden">
+                            Adres in het buitenland
+                        </label>
+                    </div>
+
+                    <fieldset class="extra-stap" id="adres-nl">
+                        <legend class="visually-hidden">Adresgegevens Nederland</legend>
+
+                        <div class="input-rij">
+                            <label class="veld-groot">Straatnaam *
+                                <input type="text" name="nl_straat" required>
+                            </label>
+                            <label class="veld-klein">Huisnummer *
+                                <input type="number" name="nl_huisnummer" required>
+                            </label>
+                            <label class="veld-klein">Toevoeging
+                                <input type="text" name="nl_toevoeging">
+                            </label>
+                        </div>
+
+                        <div class="input-rij">
+                            <label class="veld-klein">Postcode *
+                                <input type="text" name="nl_postcode" required pattern="^[1-9][0-9]{3}\s?[a-zA-Z]{2}$">
+                            </label>
+                            <label class="veld-groot">Woonplaats *
+                                <input type="text" name="nl_woonplaats" required>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="extra-stap" id="adres-buitenland">
+                        <legend class="visually-hidden">Adresgegevens Buitenland</legend>
+                        <label>Straat en huisnummer *
+                            <input type="text" name="buitenland_straat" required>
+                        </label>
+                        <label>Postcode en plaats *
+                            <input type="text" name="buitenland_postcode_plaats" required>
+                        </label>
+
+                        <label>Landcode *
+                            <input type="text" name="buitenland_landcode" list="landcodes-lijst" required>
+                            <datalist id="landcodes-lijst">
+                                <option value="AF">Afghanistan</option>
+                                <option value="AL">Albanië</option>
+                                <option value="DZ">Algerije</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AG">Antigua en Barbuda</option>
+                                <option value="AR">Argentinië</option>
+                                <option value="AM">Armenië</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australië</option>
+                                <option value="AZ">Azerbeidzjan</option>
+                                <option value="BS">Bahama's</option>
+                                <option value="BH">Bahrein</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BE">België</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BT">Bhutan</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BA">Bosnië en Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BR">Brazilië</option>
+                                <option value="BN">Brunei</option>
+                                <option value="BG">Bulgarije</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="KH">Cambodja</option>
+                                <option value="CA">Canada</option>
+                                <option value="CF">Centraal-Afrikaanse Republiek</option>
+                                <option value="CL">Chili</option>
+                                <option value="CN">China</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comoren</option>
+                                <option value="CG">Congo-Brazzaville</option>
+                                <option value="CD">Congo-Kinshasa</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CW">Curaçao</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="DK">Denemarken</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="DO">Dominicaanse Republiek</option>
+                                <option value="DE">Duitsland</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egypte</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="GQ">Equatoriaal-Guinea</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estland</option>
+                                <option value="SZ">Eswatini</option>
+                                <option value="ET">Ethiopië</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="PH">Filipijnen</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">Frankrijk</option>
+                                <option value="GA">Gabon</option>
+                                <option value="GM">Gambia</option>
+                                <option value="GE">Georgië</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GD">Grenada</option>
+                                <option value="GR">Griekenland</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GN">Guinee</option>
+                                <option value="GW">Guinee-Bissau</option>
+                                <option value="GY">Guyana</option>
+                                <option value="HT">Haïti</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HU">Hongarije</option>
+                                <option value="IE">Ierland</option>
+                                <option value="IS">IJsland</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesië</option>
+                                <option value="IQ">Irak</option>
+                                <option value="IR">Iran</option>
+                                <option value="IL">Israël</option>
+                                <option value="IT">Italië</option>
+                                <option value="CI">Ivoorkust</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japan</option>
+                                <option value="YE">Jemen</option>
+                                <option value="JO">Jordanië</option>
+                                <option value="CV">Kaapverdië</option>
+                                <option value="CM">Kameroen</option>
+                                <option value="KZ">Kazachstan</option>
+                                <option value="KE">Kenia</option>
+                                <option value="KG">Kirgizië</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="KW">Koeweit</option>
+                                <option value="XK">Kosovo</option>
+                                <option value="HR">Kroatië</option>
+                                <option value="LA">Laos</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LV">Letland</option>
+                                <option value="LB">Libanon</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libië</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Litouwen</option>
+                                <option value="LU">Luxemburg</option>
+                                <option value="MG">Madagaskar</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MV">Maldiven</option>
+                                <option value="MY">Maleisië</option>
+                                <option value="ML">Mali</option>
+                                <option value="MT">Malta</option>
+                                <option value="MA">Marokko</option>
+                                <option value="MH">Marshalleilanden</option>
+                                <option value="MR">Mauritanië</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="MX">Mexico</option>
+                                <option value="FM">Micronesië</option>
+                                <option value="MD">Moldavië</option>
+                                <option value="MC">Monaco</option>
+                                <option value="MN">Mongolië</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="NA">Namibië</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NL">Nederland</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NZ">Nieuw-Zeeland</option>
+                                <option value="NE">Niger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="KP">Noord-Korea</option>
+                                <option value="MK">Noord-Macedonië</option>
+                                <option value="NO">Noorwegen</option>
+                                <option value="UG">Oeganda</option>
+                                <option value="UA">Oekraïne</option>
+                                <option value="UZ">Oezbekistan</option>
+                                <option value="OM">Oman</option>
+                                <option value="AT">Oostenrijk</option>
+                                <option value="TL">Oost-Timor</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="PW">Palau</option>
+                                <option value="PS">Palestina</option>
+                                <option value="PA">Panama</option>
+                                <option value="PG">Papoea-Nieuw-Guinea</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="PL">Polen</option>
+                                <option value="PT">Portugal</option>
+                                <option value="QA">Qatar</option>
+                                <option value="RO">Roemenië</option>
+                                <option value="RU">Rusland</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="KN">Saint Kitts en Nevis</option>
+                                <option value="LC">Saint Lucia</option>
+                                <option value="VC">Saint Vincent en de Grenadines</option>
+                                <option value="SB">Salomonseilanden</option>
+                                <option value="WS">Samoa</option>
+                                <option value="SM">San Marino</option>
+                                <option value="ST">Sao Tomé en Principe</option>
+                                <option value="SA">Saoedi-Arabië</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Servië</option>
+                                <option value="SC">Seychellen</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="SG">Singapore</option>
+                                <option value="SX">Sint Maarten</option>
+                                <option value="SI">Slovenië</option>
+                                <option value="SK">Slowakije</option>
+                                <option value="SD">Soedan</option>
+                                <option value="SO">Somalië</option>
+                                <option value="ES">Spanje</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SY">Syrië</option>
+                                <option value="TJ">Tadzjikistan</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="TH">Thailand</option>
+                                <option value="TG">Togo</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad en Tobago</option>
+                                <option value="TD">Tsjaad</option>
+                                <option value="CZ">Tsjechië</option>
+                                <option value="TN">Tunesië</option>
+                                <option value="TR">Turkije</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VA">Vaticaanstad</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="AE">Verenigde Arabische Emiraten</option>
+                                <option value="US">Verenigde Staten</option>
+                                <option value="GB">Verenigd Koninkrijk</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="BY">Wit-Rusland</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                                <option value="ZA">Zuid-Afrika</option>
+                                <option value="KR">Zuid-Korea</option>
+                                <option value="SS">Zuid-Soedan</option>
+                                <option value="SE">Zweden</option>
+                                <option value="CH">Zwitserland</option>
+                            </datalist>
+                        </label>
+                    </fieldset>
+
+
+                    <label>Telefoonnummer
+                        <input type="tel" name="gemachtigde_telefoon">
+                    </label>
+                    <label>E-mailadres
+                        <input type="email" name="gemachtigde_email">
+                    </label>
+
+                </fieldset>
+                <div class="button-group">
+                    <button type="button" id="btn-terug" class="ns-btn ns-btn-outline">Vorige</button>
+                    <button type="submit" id="btn-verzenden" class="ns-btn">Verzenden</button>
+                </div>
+
+            </div>
+
         </form>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

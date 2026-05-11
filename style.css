@@ -58,6 +58,23 @@ h1 {
     margin-top: 0.5em;
 }
 
+h2 {
+    color: var(--ns-blue);
+    font-family: nssans-bold, sans-serif; 
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+a {
+    display: inline-block; 
+    text-decoration: none; 
+    margin-top: 2em;
+}
+
 .school-badge {
     background: var(--ns-blue);
     color: white;
@@ -83,7 +100,7 @@ main {
 
 
 .card {
-    background: var(--card-background);
+    background: var(--card-bg);
     border: none;
     border-radius: 8px;
     padding: 2em;
@@ -119,7 +136,9 @@ label {
 
 input[type="text"],
 input[type="number"],
-input[type="date"] {
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
     display: block;
     width: 100%;
     padding: 12px;
@@ -127,14 +146,15 @@ input[type="date"] {
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-    color: var(--text-clr-date);
     transition: border-color 0.2s;
 }
 
 
 input[type="text"]:focus,
 input[type="number"]:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
     outline: none;
     border-color: var(--ns-yellow);
     box-shadow: 0 0 0 2px var(--ns-yellow);
@@ -163,5 +183,147 @@ fieldset.extra-stap {
 }
 
 fieldset:has(input[value="ja"]:checked) + fieldset.extra-stap {
+    display: block;
+}
+
+/* CSS Validatie & Error Styling*/
+input:user-valid {
+    border-color: #2e7d32; /* Groen voor goed */
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+input:user-invalid {
+    border-color: #d32f2f; /* Rood voor fout */
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+.error-msg {
+    color: #d32f2f;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: none; 
+    margin-top: 5px;
+}
+
+/* NS Knoppen Styling */
+.ns-btn {
+    background-color: var(--ns-yellow);
+    color: var(--ns-blue);
+    border: none;
+    padding: 12px 24px;
+    font-family: nssans-bold, sans-serif;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.ns-btn:hover {
+    background-color: #e5b30c; /* Iets donkerder geel */
+}
+
+.ns-btn:active {
+    transform: scale(0.98); /* Klik-effectje */
+}
+
+/* Voor de "Terug" knop doen we een blauwe rand in plaats van een geel vlak */
+.ns-btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--ns-blue);
+    color: var(--text-clr);
+    margin-right: 10px;
+}
+
+.ns-btn-outline:hover {
+    background-color: rgba(0, 48, 130, 0.1);
+}
+
+.of-text {
+    text-align: center;
+    font-family: nssans-bold, sans-serif;
+    color: var(--ns-blue);
+    margin: 15px 0;
+}
+
+/* Verberg het standaard bolletje, maar hou hem leesbaar voor schermlezers */
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* De knoppen naast elkaar zetten */
+.keuze-knoppen {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Zorgt dat ze op mobiel netjes onder elkaar vallen */
+}
+
+/* Styling van de knop zelf */
+.ns-keuze-label {
+    flex: 1;
+    border: 2px solid var(--ns-blue);
+    color: var(--ns-blue);
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-family: nssans-bold, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--card-bg);
+}
+
+.ns-keuze-label:hover {
+    background-color: rgba(0, 48, 130, 0.05);
+}
+
+/* Verberg de 3 invoervelden van Stap 2 standaard */
+#invoer-bsn,
+#invoer-becon,
+#invoer-protocol {
+    display: none;
+    margin-top: 15px;
+    padding: 1em;
+    border-left: 4px solid var(--ns-yellow);
+}
+
+/* MAGIE: Als de radio button erin geselecteerd is, kleur de hele knop blauw! */
+.ns-keuze-label:has(input:checked) {
+    background-color: var(--ns-blue);
+    color: white;
+}
+
+.input-rij {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; 
+}
+
+/* De verhoudingen (stukjes van de taart) */
+.veld-groot {
+    flex: 3; 
+}
+
+.veld-klein {
+    flex: 1; 
+}
+
+/* Zorg dat de extra-stappen goed getoond/verborgen worden */
+.extra-stap {
+    display: none;
+    margin-top: 15px;
+    padding: 1em;
+    border: none;
+    border-left: 4px solid var(--ns-yellow);
+}
+
+/*Toon het juiste invoerveld op basis van de gekozen radio button */
+#gemachtigde-kaart:has(input[value="bsn"]:checked) #invoer-bsn,
+#gemachtigde-kaart:has(input[value="becon"]:checked) #invoer-becon,
+#gemachtigde-kaart:has(input[value="protocol"]:checked) #invoer-protocol,
+#adres-kaart:has(input[value="nl"]:checked) #adres-nl,
+#adres-kaart:has(input[value="buitenland"]:checked) #adres-buitenland {
     display: block;
 }
